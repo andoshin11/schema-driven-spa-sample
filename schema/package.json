@@ -1,0 +1,12 @@
+{
+  "name": "schema",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "lint-openapi ./schema.yml"
+  },
+  "devDependencies": {
+    "ibm-openapi-validator": "^0.34.1"
+  }
+}
