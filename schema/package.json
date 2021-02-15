@@ -4,9 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "lint-openapi ./schema.yml"
+    "lint": "lint-openapi ./schema.yml",
+    "codegen:client": "request-gen generate ./schema.yml --dist ../gen/client",
+    "codegen:server": "oax generate ./schema.yml --dist ../server/src/types && ts-gen generate ./schema.yml --dist ../server/src/types/schema"
   },
   "devDependencies": {
-    "ibm-openapi-validator": "^0.34.1"
+    "@squelette/request-gen": "^1.1.0",
+    "ibm-openapi-validator": "^0.34.1",
+    "typed-oax": "^0.0.4",
+    "typescript": "^4.1.5"
   }
 }
