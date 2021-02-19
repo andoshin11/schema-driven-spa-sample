@@ -1,0 +1,11 @@
+{
+  "name": "petstore",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "shin-ando <shin.ando@linecorp.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint:schema": "cd schema;yarn run lint",
+    "codegen:client": "cd schema;yarn run codegen:client"
+  }
+}
