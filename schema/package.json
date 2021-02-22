@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "lint-openapi ./schema.yml",
-    "codegen:client": "request-gen generate ./schema.yml --dist ../gen/client",
+    "codegen:client": "request-gen generate ./schema.yml --dist ../client/src/infra/network/requests",
     "codegen:server": "oax generate ./schema.yml --dist ../server/src/types && ts-gen generate ./schema.yml --dist ../server/src/types/schema"
   },
   "devDependencies": {

@@ -8,6 +8,14 @@ export interface PetData {
 }
 
 export default class PetEntity extends BaseEntity<PetData> {
+  get id() {
+    return this._data.id
+  }
+
+  get name() {
+    return this._data.name
+  }
+
   get categoryStr() {
     const { category } = this._data
 

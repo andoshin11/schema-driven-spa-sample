@@ -1,7 +1,7 @@
 import { singleton, inject } from 'tsyringe'
 import PetRepository from '@/interface/repositories/PetRepository'
 import { Store } from '@/store'
-import PetEntity, { PetData } from '@/domain/Pet'
+import PetEntity, { PetData } from '@/domain/entities/Pet'
 
 @singleton()
 export default class PetRepositoryImpl implements PetRepository {

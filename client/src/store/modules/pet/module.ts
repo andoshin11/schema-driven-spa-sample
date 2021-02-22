@@ -1,6 +1,6 @@
 import { PetState, initialState } from './state'
 import { createTypeSafeModule } from '@/libs/vuex-type-kit'
-import { PetData } from '@/domain/Pet'
+import { PetData } from '@/domain/entities/Pet'
 
 export const module = createTypeSafeModule({
   namespaced: true,

@@ -1,4 +1,4 @@
-import PetEntity, { PetData } from '@/domain/Pet'
+import PetEntity, { PetData } from '@/domain/entities/Pet'
 
 export default interface PetRepository {
   getPets(): PetEntity[]

@@ -1,22 +1,26 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-
+    <h1>Pet List</h1>
+    <PetList/>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onBeforeMount } from "vue";
 import { container } from 'tsyringe'
-import PetRepository from '@/interface/repositories/PetRepository'
+import FetchPostsUsecase from '@/usecases/pet/FetchPetsUsecase'
+import PetList from '@/containers/Pet/List'
 
 export default defineComponent({
+  components: {
+    PetList
+  },
   name: "Home",
   setup() {
-    console.log('Inside setup')
-    const repository = container.resolve<PetRepository>('PetRepository')
-    console.log('repository')
-    console.log(repository)
+    onBeforeMount(async () => {
+      const fetchPostsUsecase = container.resolve(FetchPostsUsecase)
+      await fetchPostsUsecase.execute()
+    })
   }
 });
 </script>

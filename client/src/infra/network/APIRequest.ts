@@ -7,7 +7,4 @@ export interface APIRequest<R> {
   method: TupleToUnion<typeof HTTPMethod>
   params?: any // eslint-disable-line @typescript-eslint/no-explicit-any
   baseURL?: string
-  deleteCachesAfterSuccess?: string[] // specify delete target cache names
-  deleteAllCaches?: boolean
-  parse?: (data: any) => R // eslint-disable-line @typescript-eslint/no-explicit-any
 }

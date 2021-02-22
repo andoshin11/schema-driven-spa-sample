@@ -1,4 +1,4 @@
-import { PetData } from '@/domain/Pet'
+import { PetData } from '@/domain/entities/Pet'
 
 export interface PetState {
   byIds: Record<PetData['id'], PetData>,
